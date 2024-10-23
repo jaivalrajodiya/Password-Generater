@@ -21,9 +21,12 @@ public class History_Adapter extends RecyclerView.Adapter<History_Adapter.ViewHo
 
     Context context;
 
-    public History_Adapter(ArrayList<String> passwordlist, Context context) {
+    Onclickevent onclickevent;
+
+    public History_Adapter(ArrayList<String> passwordlist, Context context, Onclickevent onclickevent) {
         this.passwordlist = passwordlist;
         this.context = context;
+        this.onclickevent = onclickevent;
     }
 
     @NonNull
@@ -37,7 +40,7 @@ public class History_Adapter extends RecyclerView.Adapter<History_Adapter.ViewHo
     public void onBindViewHolder(@NonNull History_Adapter.ViewHolader holder, int position) {
         try {
             holder.txt_Hpassword.setText(passwordlist.get(position));
-
+            holder.txt_Hpassword.setSelected(true);
             holder.Hcopy.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -65,12 +68,25 @@ public class History_Adapter extends RecyclerView.Adapter<History_Adapter.ViewHo
 
     public class ViewHolader extends RecyclerView.ViewHolder {
         TextView txt_Hpassword;
-        ImageView Hcopy;
+        ImageView Hcopy,HDelete;
         public ViewHolader(@NonNull View itemView) {
             super(itemView);
 
             Hcopy = itemView.findViewById(R.id.Hcopy);
             txt_Hpassword = itemView.findViewById(R.id.txt_Hpassword);
+
+            HDelete = itemView.findViewById(R.id.HDelete);
+
+            HDelete.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    onclickevent.onItemClick(getAdapterPosition());
+                }
+            });
         }
+    }
+
+    public interface Onclickevent{
+        void onItemClick(int position);
     }
 }

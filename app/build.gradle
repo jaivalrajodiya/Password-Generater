@@ -11,7 +11,7 @@ android {
         minSdk 24
         targetSdk 34
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -31,7 +31,7 @@ android {
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.5.1'
-    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'com.google.android.material:material:1.12.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
     implementation 'com.intuit.sdp:sdp-android:1.1.1'
@@ -39,4 +39,5 @@ dependencies {
 
     implementation 'com.github.rtoshiro.securesharedpreferences:securesharedpreferences:1.2.0'
     implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'com.airbnb.android:lottie:6.4.1'
 }

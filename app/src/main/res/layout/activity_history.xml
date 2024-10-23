@@ -16,6 +16,14 @@
         android:elevation="@dimen/_10sdp"
         android:paddingEnd="@dimen/_7sdp">
 
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:src="@drawable/back" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -39,6 +47,7 @@
         android:layout_height="wrap_content"
         android:text="No Data Found"
         android:layout_centerInParent="true"
+        android:visibility="gone"
         android:textColor="@color/white"
         android:textSize="@dimen/_15sdp"/>
 
