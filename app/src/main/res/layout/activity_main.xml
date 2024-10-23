@@ -136,6 +136,7 @@
                         android:layout_centerVertical="true"
                         android:layout_toLeftOf="@+id/max_leth"
                         android:layout_toRightOf="@+id/min_leth"
+                        android:thumbTint="@color/black"
                         android:max="32"
                         android:min="6"
                         android:progressTint="@color/black" />
