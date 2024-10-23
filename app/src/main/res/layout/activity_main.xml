@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CC000000"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_53sdp"
+        android:paddingStart="@dimen/_7sdp"
+        android:background="@color/black"
+        android:elevation="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_7sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Generate"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/_18sdp"/>
+
+        <ImageView
+            android:id="@+id/iv_history"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/history"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_10sdp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/app_bar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GENERATED PASSWORD"
+            android:textColor="@color/white"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_11sdp"/>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:background="@drawable/curv_bg">
+
+            <TextView
+                android:id="@+id/txt_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:id="@+id/copy"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/copy"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_15sdp"/>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LENGTH 6"
+            android:textColor="@color/white"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_11sdp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:background="@drawable/curv_bg">
+
+            <TextView
+                android:id="@+id/min_leth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6"
+                android:padding="@dimen/_10sdp"
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/black"/>
+
+            <SeekBar
+                android:id="@+id/seekbar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/min_leth"
+                android:layout_toLeftOf="@+id/max_leth"
+                android:layout_centerVertical="true"
+                android:progressTint="@color/black"
+                android:min="6"
+                android:max="32"/>
+
+
+            <TextView
+                android:id="@+id/max_leth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="32"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:padding="@dimen/_10sdp"
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/black"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SETTINGS"
+            android:textColor="@color/white"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_11sdp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:background="@drawable/curv_bg"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.7"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
+                android:text="Uppercase(eg. ABC)"
+                android:textColor="@color/black"
+                android:textSize="18sp"  />
+
+            <com.suke.widget.SwitchButton
+                android:id="@+id/switch_uppercase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:sb_checked_color="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:background="@drawable/curv_bg"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.7"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
+                android:text="Lowercase(eg. abc)"
+                android:textColor="@color/black"
+                android:textSize="18sp"  />
+
+            <com.suke.widget.SwitchButton
+                android:id="@+id/switch_Lowercase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:sb_checked_color="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:background="@drawable/curv_bg"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.7"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
+                android:text="Numbers(eg. 569)"
+                android:textColor="@color/black"
+                android:textSize="18sp"  />
+
+            <com.suke.widget.SwitchButton
+                android:id="@+id/switch_Numbers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:sb_checked_color="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:background="@drawable/curv_bg"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.7"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
+                android:text="Special(eg. @!$%)"
+                android:textColor="@color/black"
+                android:textSize="18sp"  />
+
+            <com.suke.widget.SwitchButton
+                android:id="@+id/switch_spcial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:sb_checked_color="@color/black"/>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/genarte_password"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="GENRATE PASSWORD"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/black"
+            android:background="@drawable/curv_bg"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</RelativeLayout>
