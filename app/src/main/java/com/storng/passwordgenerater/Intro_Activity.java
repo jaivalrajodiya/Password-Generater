@@ -13,8 +13,6 @@ import android.widget.Toast;
 public class Intro_Activity extends AppCompatActivity {
 
     ImageView layout_letstart,layout_pp,layout_ra,layout_sa;
-
-
     private static final long DOUBLE_BACK_PRESS_TIME_DELTA = 2000;
     private long lastBackPressTime = 0;
 
